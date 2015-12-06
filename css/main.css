@@ -1,0 +1,32 @@
+html {
+  background-color: #ccffcc;
+  font-family: sans-serif;
+}
+
+#title {
+  font-family: verdana;
+  font-size: 60px;
+  color: blue;
+}
+
+#wip {
+  background-image: url('../img/wip.jpg');
+  background-repeat: no-repeat;
+  height: 450px;
+  width; 450px;
+}
+
+#wip:hover {
+  background-image: url('../img/busy.gif');
+}
+
+#myGit:hover {
+  color: #ff9900;
+}
+
+#myGit {
+  transition: all 1s ease;
+  color: #0099ff;
+  text-decoration: none;
+  clear: both;
+}
