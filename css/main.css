@@ -1,6 +1,7 @@
 html {
-  background-color: #ccffcc;
   font-family: sans-serif;
+
+  background-color: #ccffcc;
 }
 
 #title {
@@ -10,37 +11,33 @@ html {
 }
 
 .wip {
-  background-image: url('../img/wip.jpg');
-  background-repeat: no-repeat; 
-  
-  height: 450px;
-  width: 50%;
-
   position: relative;
+ 
+  height: 450px;
+  width: 35%;
+
+  background-image: url("../img/wip.jpg");
+  background-repeat: no-repeat;
 }
 
-.wip:hover {
-  background-image: url('../img/busy.gif');
-}
+.wip:hover { background-image: url("../img/busy.gif"); }
 
-.wipDescription {
-  visibility: hidden;
-  opacity: 0;
-
+.wip-description {
   position: relative;
   top: 200px;
   
   color: #10af38;
+
+  visibility: hidden;
+  opacity: 0;
 }
 
-.wip:hover .wipDescription{
+.wip:hover .wip-description{
   visibility: visible;
   opacity: 1;
 }
 
-.wipDescription:nth-child(2){
-  /*color: #0093ff;*/
-  color: red;
+.wip-description:nth-child(2){
   -webkit-animation-name: wipNote; /* Chrome, Safari, Opera */
   -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
   -webkit-animation-iteration-count: infinite;
@@ -51,29 +48,27 @@ html {
 
 /* Chrome, Safari, Opera */
 @-webkit-keyframes wipNote {
-    0%   {color: red;}
-    25%  {color: yellow;}
-    50%  {color: blue;}
-    75%  {color: green;}
-    100% {color: red;}
+    0%   { color: red; }
+    25%  { color: yellow; }
+    50%  { color: blue; }
+    75%  { color: green; }
+    100% { color: red; }
 }
 
 /* Standard syntax */
 @keyframes wipNote {
-    0%   {color: red;}
-    25%  {color: yellow;}
-    50%  {color: blue;}
-    75%  {color: green;}
-    100% {color: red;}
+    0%   { color: red; }
+    25%  { color: yellow; }
+    50%  { color: blue; }
+    75%  { color: green; }
+    100% { color: red; }
 }
 
-#myGit:hover {
-  color: #ff9900;
-}
-
-#myGit {
-  transition: all 1s ease;
+#my-git {
   color: #0099ff;
   text-decoration: none;
-  clear: both;
+
+  transition: all 1s ease;
 }
+
+#my-git:hover { color: #ff9900; }
