@@ -9,15 +9,62 @@ html {
   color: blue;
 }
 
-#wip {
+.wip {
   background-image: url('../img/wip.jpg');
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; 
+  
   height: 450px;
-  width; 450px;
+  width: 50%;
+
+  position: relative;
 }
 
-#wip:hover {
+.wip:hover {
   background-image: url('../img/busy.gif');
+}
+
+.wipDescription {
+  visibility: hidden;
+  opacity: 0;
+
+  position: relative;
+  top: 200px;
+  
+  color: #10af38;
+}
+
+.wip:hover .wipDescription{
+  visibility: visible;
+  opacity: 1;
+}
+
+.wipDescription:nth-child(2){
+  /*color: #0093ff;*/
+  color: red;
+  -webkit-animation-name: wipNote; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+  -webkit-animation-iteration-count: infinite;
+  animation-name: wipNote;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes wipNote {
+    0%   {color: red;}
+    25%  {color: yellow;}
+    50%  {color: blue;}
+    75%  {color: green;}
+    100% {color: red;}
+}
+
+/* Standard syntax */
+@keyframes wipNote {
+    0%   {color: red;}
+    25%  {color: yellow;}
+    50%  {color: blue;}
+    75%  {color: green;}
+    100% {color: red;}
 }
 
 #myGit:hover {
