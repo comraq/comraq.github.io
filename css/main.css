@@ -5,9 +5,17 @@ html {
 }
 
 #title {
+  margin: 0;
+
   font-family: verdana;
   font-size: 60px;
   color: blue;
+  text-align: center;
+
+  border: 1px dashed #1028fc;
+  background-color: #00cd10;
+  padding: 10px 0px 10px 0;
+  opacity: 0.3;
 }
 
 .wip {
