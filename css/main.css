@@ -22,13 +22,24 @@ html {
   position: relative;
  
   height: 450px;
-  width: 35%;
+  width: 50%;
 
   background-image: url("../img/wip.jpg");
   background-repeat: no-repeat;
 }
 
 .wip:hover { background-image: url("../img/busy.gif"); }
+
+button {
+  margin-top: 165px;
+  margin-right: 220px;
+
+  float: right;
+
+  visibility: hidden;
+}
+
+.wip:hover button { visibility: visible; }
 
 .wip-description {
   position: relative;
@@ -40,7 +51,7 @@ html {
   opacity: 0;
 }
 
-.wip:hover .wip-description{
+.wip:hover .wip-description {
   visibility: visible;
   opacity: 1;
 }
