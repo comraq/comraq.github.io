@@ -91,3 +91,9 @@ button {
 }
 
 #my-git:hover { color: #ff9900; }
+
+#algorithm { 
+  float: right;
+  
+  visibility: visible;
+}
