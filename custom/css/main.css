@@ -15,17 +15,27 @@ html {
 }
 
 #title {
-  margin: 0;
+  margin-top: 30px;
 
   font-family: verdana;
   font-size: 60px;
-  color: blue;
+  color: #006bb3;
   text-align: center;
+  text-shadow: 10px 10px 3px #888;
 
   border: 1px dashed #1028fc;
-  background-color: #00cd10;
-  padding: 10px 0px 10px 0;
+  background-color: #54cd33;
+  padding: 10px 0px 25px 0;
   opacity: 0.3;
+}
+
+#title:hover { 
+  -webkit-animation-name: wipNote; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+  -webkit-animation-iteration-count: infinite;
+  animation-name: wipNote;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
 }
 
 .wip-container {
@@ -93,7 +103,7 @@ button {
     0%   { color: red; }
     25%  { color: yellow; }
     50%  { color: blue; }
-    75%  { color: green; }
+    75%  { color: #ccff33; }
     100% { color: red; }
 }
 
@@ -102,7 +112,7 @@ button {
     0%   { color: red; }
     25%  { color: yellow; }
     50%  { color: blue; }
-    75%  { color: green; }
+    75%  { color: #ccff33; }
     100% { color: red; }
 }
 
