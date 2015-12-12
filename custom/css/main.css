@@ -2,7 +2,7 @@ html {
   font-family: sans-serif;
 
   /*background-color: #ccffcc;*/
-  background-image: url("../../img/grass.jpg");
+  background-image: url("../img/grass.jpg");
 }
 
 #html-window {
@@ -43,11 +43,11 @@ html {
   height: 100%;
   width: 100%;
 
-  background-image: url("../../img/wip.jpg");
+  background-image: url("../img/wip.jpg");
   background-repeat: no-repeat;
 }
 
-.wip:hover { background-image: url("../../img/busy.gif"); }
+.wip:hover { background-image: url("../img/busy.gif"); }
 
 button {
   position: relative;
