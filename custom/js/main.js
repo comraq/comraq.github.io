@@ -3,26 +3,9 @@ var main = function() {
     navBar.navUpdateActive(this);
     contentPane.updateContent(this);
   });
-  
-
-/* Start of My Wip-testing */
-  $("#title").mouseenter(function() {
-    $("#title").fadeTo('slow', 1);
-  });
-
-  $("#title").mouseleave(function() {
-    $("#title").fadeTo('slow', 0.3);
-  });
-
-  $("button").click(function() {
-    $(".wip-description").show();
-  });
-
-  $(".wip").mouseleave(function() {
-    $(".wip-description").hide();
-  });
-/* End of My Wip-testing */
-
+ 
+  $(".project").on({mouseenter: projects.markActive,
+                    mouseleave: projects.markInactive});
 };
 
 var navBar = {
@@ -36,12 +19,12 @@ var navBar = {
 
 var contentPane = {
   updateContent: function(navComp) {
-    contentPane.removeContent();
+    contentPane.removeContent(navComp);
     contentPane.addContent(navComp);
   },
 
-  removeContent: function() {
-    $(".my-containers").fadeTo(500, 0);
+  removeContent: function(navComp) {
+    if (!$(navComp).hasClass("dropdown-toggle")) $(".my-containers").fadeTo(500, 0);
   },
 
   addContent: function(navComp) {
@@ -54,5 +37,25 @@ var contentPane = {
     };
   }
 };
+
+var projects = {
+  markInactive: function() {
+    if ($(this).hasClass("project-jumbo")) {
+      $(this).removeClass("rainbow");
+      $(this).children("h1").removeClass("rainbow");
+    } else {
+      $(this).fadeTo(500, 0.7);
+    }
+  },
+
+  markActive: function() {
+    if ($(this).hasClass("project-jumbo")) {
+      $(this).addClass("rainbow");
+      $(this).children("h1").addClass("rainbow");
+    } else {
+      $(this).fadeTo(500, 1);
+    }
+  }
+}
 
 $(document).ready(main);

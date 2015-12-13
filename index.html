@@ -80,7 +80,7 @@
         </ol>
         <div class="carousel-inner" role="listbox">
           <div class="item active">
-            <img class="first-slide" src="custom/img/welcome.jpg" alt="First slide">
+            <img class="first-slide" src="custom/img/welcome.jpg" alt="Home/Welcome Image">
             <div class="container">
               <div class="carousel-caption">
                 <h1>Welcome to my Webpage!</h1>
@@ -90,7 +90,7 @@
             </div>
           </div>
           <div class="item">
-            <img class="second-slide" src="custom/img/sudoku.png" alt="Second slide">
+            <img class="second-slide" src="custom/img/sudoku.png" alt="Projects Cover Image">
             <div class="container">
               <div class="carousel-caption">
                 <h1>My Projects</h1>
@@ -100,7 +100,7 @@
             </div>
           </div>
           <div class="item">
-            <img class="third-slide" src="custom/img/wip.jpg" alt="Third slide">
+            <img class="third-slide" src="custom/img/wip.jpg" alt="Currently WIP">
             <div class="container">
               <div class="carousel-caption">
                 <h1>Lack of Content</h1>
@@ -129,15 +129,63 @@
     </div><!-- /#about-container -->
 
     <div class="my-containers" id="projects-container">
-      <h1 id="title">Welcome to my Projects Page!</h1>
-      <p id="wip-excuse">
-        Since I just updated my homepage, this page is currently <em>WIP</em> but should be the next to be updated.<br>
-        Please, stayed tuned...
-      </p>
-      <div class="wip-container">
-        <div class="wip">
-          <button>Click Me!</button>
-          <p class="wip-description">Busy with school (exams coming up), but will try to find time to work on this.</p>
+      <div class="jumbotron project project-jumbo">
+        <h1>Welcome to my Projects Page!</h1>
+        <p>This page is an exhibition of the side projects which I have worked on during my spare time. School related projects are excluded.</p>
+      </div>
+
+
+      <div class="row project">
+        <div class="col-md-7">
+          <h2 class="project-title">Sudoku Program</h2>
+          <div class="project-subtitle">In Java and Python</div>
+          <p class="project-description">
+            A sudoku program first written in Python then later translated into Java, with a GUI made using the Java Swing Library.<br><br>
+            In addition to the typical 3x3 blocks x9 forming a grid with 81 squares, this program supports the generic NxN dimensions, such as 4x4 blocks x16, a grid with 256 squares.<br><br>
+            This program can solve and generate random Sudokus at levels of difficulty and is fully playable on desktop environments.
+          </p>
+          <a class="project-ref project-source" href="https://github.com/comraq/My-Sudoku-Java">>>View Source Java</a>
+          <a class="project-ref project-source" href="https://github.com/comraq/My-Sudoku">>>View Source Python</a>
+        </div>
+        <div class="col-md-5">
+          <img class="project-image" src="custom/img/sudoku.png" alt="Sudoku Program Image">
+        </div>
+      </div>
+
+      <div class="row project">
+        <div class="col-md-5">
+          <img class="project-image" src="custom/img/calculator.png" alt="Sudoku Program Image">
+        </div>
+        <div class="col-md-7">
+          <h2 class="project-title">Programming Calculator</h2>
+          <div class="project-subtitle">In HTML/CSS/Javascript</div>
+          <p class="project-description">
+            A calculator web application with elements inclined towards computer programmers.<br><br>
+            In addition to standard calculations, this calculator features shortcuts to capabilities such as:
+            <ul>
+              <li>Powers of 2</li>
+              <li>Log base of 2</li>
+              <li>Binary/Decimal/Hex conversions</li>
+              <li>The Modulo (%) operator</li>
+            </ul>
+          </p>
+          <a class="project-ref project-source" href="https://github.com/comraq/My-Calculator">>>View Source</a>
+          <a class="project-ref project-page" href="http://comraq.github.io/My-Calculator/">>>Try It!</a>
+        </div>
+      </div>
+
+      <div class="row project">
+        <div class="col-md-7">
+          <h2 class="project-title">Maze Solver</h2>
+          <div class="project-subtitle">In C++</div>
+          <p class="project-description">
+            A maze solver program that parses an image of a maze using the OpenCV Library. Then uses the Breadth-First-Search (BFS) Algorithm to solve the maze by interpreting the pixels read.<br><br>
+            Upon solving the maze, this program draws the found solution path onto a copy of the original image in either green, green or red.
+          </p>
+          <a class="project-ref project-source" href="https://github.com/comraq/Maze-Solver">>>View Source</a>
+        </div>
+        <div class="col-md-5">
+          <img class="project-image" src="custom/img/maze.jpg" alt="Solved Maze Image">
         </div>
       </div>
     </div><!-- /#projects-container -->
