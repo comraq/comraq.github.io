@@ -1,4 +1,6 @@
 var main = function() {
+  $(".content-pane").fadeTo(600, 1);
+
   $(".nav a").on("click", function() {
     navBar.navUpdateActive(this);
     contentPane.updateContent(this);
@@ -10,9 +12,9 @@ var main = function() {
 
 var navBar = {
   navUpdateActive: function(navComp) {
-    $(".nav").find(".active").removeClass("active");
+    $(".nav").find(".my-navbar-active").removeClass("my-navbar-active");
     if (!$(navComp).hasClass("dropdown-toggle")) {
-      $(navComp).parent().addClass("active");
+      $(navComp).parent().addClass("my-navbar-active");
     };
   }
 };
@@ -29,11 +31,11 @@ var contentPane = {
 
   addContent: function(navComp) {
     if ($(navComp).is("#nav-home")) {
-      $("#home-container").fadeTo(500, 1);
+      $(".home-container").fadeTo(500, 1);
     } else if ($(navComp).is("#nav-about")) {
-      $("#about-container").fadeTo(500, 1);
+      $(".about-container").fadeTo(500, 1);
     } else if ($(navComp).is("#nav-projects")) {
-      $("#projects-container").fadeTo(500, 1);
+      $(".projects-container").fadeTo(500, 1);
     };
   }
 };

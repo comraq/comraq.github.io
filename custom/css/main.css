@@ -15,18 +15,45 @@ html {
 body {
   position: absolute;
 
-  padding-bottom: 1%;
-
   background-image: url("../img/grass.jpg");
+}
+
+.content-pane {
+  position: absolute;
+
+  padding-top: 1%;
+  padding-left: 13%;
+  width: 100%;
+
+  opacity: 0;
 }
 
 /* NAVBAR
 -------------------------------------------------- */
-.navbar-header {
-  height: 50px;
+.my-navbar {
+  top: -2px;
+  left: -2px;
+  right: -2px;
+
+  border: 2px solid green;
+  background-color: #dfd;
 }
+
+.nav { background-color: #dfd; }
+
+.my-navbar-active { background-color: #cec; }
+
+.navbar-header { height: 50px; }
+
 .navbar-brand {
   float: right;
+
+  background-color: #dfd;
+}
+
+.navbar-brand:hover {
+  background-color: #cec;
+  text-decoration: none;
 }
 
 /* DROPDOWN MENU
@@ -46,16 +73,13 @@ body {
 
 .my-containers {
   position: absolute;
+  
+  width: 95%;
 }
 
 /* CAROUSEL
 -------------------------------------------------- */
-#home-container {
-  left: 95px;
-
-  height: 600px;
-  width: 85%;
-}
+.home-container { height: 600px; }
 
 .carousel {
   z-index: 1; /* necessary for carousel sliders to appear on top and respond */
@@ -64,10 +88,10 @@ body {
   height: 100%;
   width: 100%;
 }
+
 /* Declare heights because of positioning of img element */
-.carousel .item {
-  height: 600px;
-}
+.carousel .item { height: 600px; }
+
 .carousel-inner > .item > img {
   position: absolute;
   top: 0;
@@ -79,16 +103,13 @@ body {
 
 /* ABOUT
 -------------------------------------------------- */
-#about-container {
-  left: 95px;
-
+.about-container {
   height: 600px;
-  width: 85%;
 
   opacity: 0; 
 }
 
-#about-container p {
+.about-container p {
   margin-top: 100px; 
 
   font-family: verdana;
@@ -100,13 +121,10 @@ body {
 
 /* PROJECTS
 -------------------------------------------------- */
-#projects-container {
-  position: relative;
-
+.projects-container {
   padding-top: 5%;
 
   height: auto;
-  width: 100%;
 
   opacity: 0;
 }
@@ -115,9 +133,9 @@ body {
   position: relative;
   margin-top: 5%;
   margin-bottom: 5%;
-  left: 10%;
+  left: 6%;
 
-  max-width: 80%;
+  max-width: 90%;
 
   border-radius: 3%;
   border: 3px solid #ded;
@@ -125,15 +143,17 @@ body {
   opacity: 0.7; 
 }
 
+.project:hover { transform: scale(1.05); }
+
 .project-jumbo {
   position: relative;
   margin: 0;
-  left: 5%;
+  left: 0;
 
   padding-left: 3%;
   padding-right: 3%;
 
-  max-width: 90%;
+  max-width: 100%;
 
   border-radius: 0;
   border: 3px dashed #aba;
@@ -180,30 +200,13 @@ body {
   min-width: 400px;  
 }
 
-.project-ref {
-  margin-right: 3%;
-}
+.project-ref { margin-right: 3%; }
 
-.project-ref:hover {
-  text-decoration: none;
-}
+.project-ref:hover { text-decoration: none; }
 
-.project-source:hover {
-  color: #33cc33;
-}
+.project-source:hover { color: #33cc33; }
 
-.project-page:hover {
-  color: #ff9900;
-}
-
-/* NAVBAR
--------------------------------------------------- */
-.navbar-header {
-  height: 50px;
-}
-.navbar-brand {
-  float: right;
-}
+.project-page:hover { color: #ff9900; }
 
 /* DROPDOWN MENU
 -------------------------------------------------- */
@@ -213,6 +216,7 @@ body {
 
   line-height: 30px;
 }
+
 .dropdown-icon {
   float: right;
 
@@ -223,16 +227,30 @@ body {
 /* FOOTER
 -------------------------------------------------- */
 .container-footer {
-  position: relative;
-  margin-left: 4%;
+  position: fixed;
+  bottom: -25px;
+  margin-left: 2%;
 
-  width: 90%;
+  height: 10%;
+  width: 95%;
+  padding-top: 1%;
+
+  border-radius: 25%;
+  border: 2px solid green;
+  background-color: #dfd;
 }
 
 .footer-item {
   height: 30px;
   vertical-align: middle;
   text-shadow: 1px 1px 3px #888;
+}
+
+.footer-author { margin-left: 5%; }
+
+.footer-to-top {
+  float: right;
+  margin-right: 5%;
 }
 
 .logo-icon {
