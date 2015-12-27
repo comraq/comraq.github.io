@@ -22,8 +22,10 @@ body {
   position: absolute;
 
   padding-top: 1%;
-  padding-left: 13%;
-  width: 100%;
+  /*padding-left: 13%;
+  width: 100%;*/
+  margin-left: 7vw; 
+  width: 90vw;
 
   opacity: 0;
 }
@@ -79,7 +81,7 @@ body {
 
 /* CAROUSEL
 -------------------------------------------------- */
-.home-container { height: 600px; }
+.home-container { height: 65vh; }
 
 .carousel {
   z-index: 1; /* necessary for carousel sliders to appear on top and respond */
@@ -90,7 +92,7 @@ body {
 }
 
 /* Declare heights because of positioning of img element */
-.carousel .item { height: 600px; }
+.carousel .item { height: 65vh; }
 
 .carousel-inner > .item > img {
   position: absolute;
@@ -104,7 +106,7 @@ body {
 /* ABOUT
 -------------------------------------------------- */
 .about-container {
-  height: 600px;
+  height: 65vh;
 
   opacity: 0; 
 }
@@ -123,6 +125,7 @@ body {
 -------------------------------------------------- */
 .projects-container {
   padding-top: 5%;
+  padding-bottom: 5%;
 
   height: auto;
 
@@ -220,40 +223,6 @@ body {
 .dropdown-icon {
   float: right;
 
-  max-width: 100%;
-  max-height: 100%;
-}
-
-/* FOOTER
--------------------------------------------------- */
-.container-footer {
-  position: fixed;
-  bottom: -25px;
-  margin-left: 2%;
-
-  height: 10%;
-  width: 95%;
-  padding-top: 1%;
-
-  border-radius: 25%;
-  border: 2px solid green;
-  background-color: #dfd;
-}
-
-.footer-item {
-  height: 30px;
-  vertical-align: middle;
-  text-shadow: 1px 1px 3px #888;
-}
-
-.footer-author { margin-left: 5%; }
-
-.footer-to-top {
-  float: right;
-  margin-right: 5%;
-}
-
-.logo-icon {
   max-width: 100%;
   max-height: 100%;
 }

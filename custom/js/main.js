@@ -1,8 +1,12 @@
 var main = function() {
-  $(".content-pane").fadeTo(600, 1);
+  $(".content-pane").fadeTo(1000, 1);
 
   $(".nav a").on("click", function() {
     navBar.navUpdateActive(this);
+    contentPane.updateContent(this);
+  });
+
+  $(".carousel-button").click(function() {
     contentPane.updateContent(this);
   });
  
@@ -20,22 +24,24 @@ var navBar = {
 };
 
 var contentPane = {
-  updateContent: function(navComp) {
-    contentPane.removeContent(navComp);
-    contentPane.addContent(navComp);
+  updateContent: function(comp) {
+    contentPane.removeContent(comp);
+    contentPane.addContent(comp);
   },
 
-  removeContent: function(navComp) {
-    if (!$(navComp).hasClass("dropdown-toggle")) $(".my-containers").fadeTo(500, 0);
+  removeContent: function(comp) {
+    if (!$(comp).hasClass("dropdown-toggle")) $(".my-containers").fadeTo(500, 0);
   },
 
-  addContent: function(navComp) {
-    if ($(navComp).is("#nav-home")) {
+  addContent: function(comp) {
+    if ($(comp).is("#nav-home")) {
       $(".home-container").fadeTo(500, 1);
-    } else if ($(navComp).is("#nav-about")) {
+    } else if ($(comp).is("#nav-about") || $(comp).is("#carousel-about")) {
       $(".about-container").fadeTo(500, 1);
-    } else if ($(navComp).is("#nav-projects")) {
+      navBar.navUpdateActive("#nav-about");      
+    } else if ($(comp).is("#nav-projects") || $(comp).is("#carousel-projects")) {
       $(".projects-container").fadeTo(500, 1);
+      navBar.navUpdateActive("#nav-projects");
     };
   }
 };

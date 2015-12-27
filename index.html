@@ -23,8 +23,9 @@
     <link href="custom/css/customCarousel.css" rel="stylesheet">
 
     <!-- Custom Stylesheets and Scripts -->
-    <script type="text/javascript" src="custom/js/main.js"></script>    
+    <script type="text/javascript" src="custom/js/main.js"></script> 
     <link rel="stylesheet" href="custom/css/main.css">
+    <link rel="stylesheet" href="common/css/common.css">
     
     <title>Adam's Webpage</title>
   </head>
@@ -85,31 +86,34 @@
             <div class="container">
               <div class="carousel-caption">
                 <h1>Welcome to my Webpage!</h1>
-                <p>My name is Yi Ran (Adam) Yin and welcome to my personal webpage! If interested, click the button below to learn more about me.</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">About Me</a></p>
+                <p>My name is Yi Ran (Adam) Yin and welcome to my personal webpage! Click the button below to view the source code for this webpage.</p>
+                <p><a class="btn btn-lg btn-primary carousel-button" href="https://github.com/comraq/comraq.github.io" role="button">View Source</a></p>
               </div>
             </div>
           </div>
+
           <div class="item">
-            <img class="second-slide" src="custom/img/sudoku.png" alt="Projects Cover Image">
+            <img class="second-slide" src="custom/img/wip.jpg" alt="Currently WIP">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>About Myself</h1>
+                <p>I am currently a student and am aspiring to become a software developer/engineer. If interested, click the button below to learn more about me.</p>
+                <p><a class="btn btn-lg btn-primary carousel-button" id="carousel-about" href="#about" role="button">About Me</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <img class="third-slide" src="custom/img/projects.png" alt="Projects Cover Image">
             <div class="container">
               <div class="carousel-caption">
                 <h1>My Projects</h1>
                 <p>Check out some of the projects that I have worked on the side during my spare time.</p>
-                <p><a class="btn btn-lg btn-primary" href="projects.html" role="button">Explore</a></p>
+                <p><a class="btn btn-lg btn-primary carousel-button" id="carousel-projects" href="#projects" role="button">Explore</a></p>
               </div>
             </div>
           </div>
-          <div class="item">
-            <img class="third-slide" src="custom/img/wip.jpg" alt="Currently WIP">
-            <div class="container">
-              <div class="carousel-caption">
-                <h1>Lack of Content</h1>
-                <p>Unfortunately, I am also quite busy with school at the moment and thus do not have much time to work on this site. However, I will try as best as I can to provide frequent updates.</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Sorry</a></p>
-              </div>
-            </div>
-          </div>
+
         </div>
         <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
           <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -135,6 +139,21 @@
         <p>This page is an exhibition of the side projects which I have worked on during my spare time and all of which can be found in my GitHub repositories. School related projects are excluded.</p>
       </div>
 
+      <div class="row project">
+        <div class="col-md-5">
+          <img class="project-image" src="custom/img/tetris.png" alt="Tetris Program Image">
+        </div>
+        <div class="col-md-7">
+          <h2 class="project-title">Tetris Game</h2>
+          <div class="project-subtitle">In HTML/CSS/Javascript</div>
+          <p class="project-description">
+            A client side web application version of the classic puzzle game, tetris, including common elements in tetris games such as level/speed select and next block preview.<br><br>
+            Unlike traditional tetris, this game also features an optional piece-wise gravity scheme, which allows blocks to fall in accordance with their original shaps after row clears, leading to possible chain reactions, comboes and score multipliers! Amongst the variety of tetris gravities, piece-wise gravity is known to be the most complex to implement, making this an interesting challenge.
+          </p>
+          <a class="project-ref project-source" href="https://github.com/comraq/My-Tetris">>>View Source</a>
+          <a class="project-ref project-page" href="http://comraq.github.io/My-Tetris/">>>Try It!</a>
+        </div>
+      </div>
 
       <div class="row project">
         <div class="col-md-7">
@@ -155,13 +174,13 @@
 
       <div class="row project">
         <div class="col-md-5">
-          <img class="project-image" src="custom/img/calculator.png" alt="Sudoku Program Image">
+          <img class="project-image" src="custom/img/calculator.png" alt="Calculator Program Image">
         </div>
         <div class="col-md-7">
           <h2 class="project-title">Programming Calculator</h2>
           <div class="project-subtitle">In HTML/CSS/Javascript</div>
           <p class="project-description">
-            A calculator web application with elements inclined towards computer programmers.<br><br>
+            A calculator front end web application with elements inclined towards computer programmers.<br><br>
             In addition to standard calculations, this calculator features shortcuts to capabilities such as:
             <ul>
               <li>Powers of 2</li>
@@ -196,7 +215,7 @@
     <div class="container-footer">  
       <footer>
         <p class="footer-to-top"><a class="footer-item" href="#">Back to Top</a></p>
-        <p class="footer-author footer-item">Developed by &middot; <a class="footer-item" href="https://github.com/comraq"><img class="logo-icon" src="custom/img/github-icon.gif"/>&nbspAdam Yin</a></p>
+        <p class="footer-author footer-item">Developed by &middot; <a class="footer-item" href="https://github.com/comraq"><img class="logo-icon" src="common/img/github-icon.gif"/>&nbspAdam Yin</a></p>
       </footer>
     </div>
 
