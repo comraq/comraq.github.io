@@ -211,6 +211,8 @@ body {
 
 .project-page:hover { color: #ff9900; }
 
+.project-download:hover { color: #ffff00; }
+
 /* DROPDOWN MENU
 -------------------------------------------------- */
 .dropdown-item {
