@@ -190,7 +190,7 @@ body {
 }
 
 .project-description {
-  line-height: 23px;
+  line-height: 1.5vw;
 
   color: #001100; 
 }
@@ -199,8 +199,10 @@ body {
   position: relative;
   float: right;
 
-  max-height: 300px;
-  min-width: 400px;  
+  height:22vw;
+  width:30vw;
+
+  border-radius: 5%;
 }
 
 .project-ref { margin-right: 3%; }
