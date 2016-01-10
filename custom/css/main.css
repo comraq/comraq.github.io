@@ -22,8 +22,6 @@ body {
   position: absolute;
 
   padding-top: 1%;
-  /*padding-left: 13%;
-  width: 100%;*/
   margin-left: 7vw; 
   width: 90vw;
 
@@ -66,6 +64,7 @@ body {
 
   line-height: 30px;
 }
+
 .dropdown-icon {
   float: right;
 
@@ -81,7 +80,10 @@ body {
 
 /* CAROUSEL
 -------------------------------------------------- */
-.home-container { height: 65vh; }
+.home-container { 
+  position: fixed;
+  height: 65vh;
+}
 
 .carousel {
   z-index: 1; /* necessary for carousel sliders to appear on top and respond */
@@ -106,6 +108,7 @@ body {
 /* ABOUT
 -------------------------------------------------- */
 .about-container {
+  position: fixed;
   height: 65vh;
 
   opacity: 0; 
