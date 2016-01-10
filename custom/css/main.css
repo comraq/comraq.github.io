@@ -80,10 +80,7 @@ body {
 
 /* CAROUSEL
 -------------------------------------------------- */
-.home-container { 
-  position: fixed;
-  height: 65vh;
-}
+.home-container {  height: 65vh; }
 
 .carousel {
   z-index: 1; /* necessary for carousel sliders to appear on top and respond */
@@ -108,7 +105,6 @@ body {
 /* ABOUT
 -------------------------------------------------- */
 .about-container {
-  position: fixed;
   height: 65vh;
 
   opacity: 0; 
