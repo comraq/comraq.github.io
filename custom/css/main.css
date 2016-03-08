@@ -129,6 +129,14 @@ body {
   text-align: center;
 }
 
+.about-link {
+  z-index: 1;
+  
+  font-family: verdana;
+  font-size: 1vw;
+  text-align: center;
+}
+
 .about-divider {
   margin-top: 1%;
   margin-bottom: 1%;
