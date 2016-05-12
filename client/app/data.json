@@ -1,0 +1,58 @@
+{
+  "title": "Adam's Webpage",
+  "navbar": [
+    { 
+      "type": "brand-img",
+      "img": "img/github-navbar.gif",
+      "path": "/"
+    },
+    { 
+      "type": "brand",
+      "value": "Adam's Webpage",
+      "path": "/"
+    },
+    {
+      "type": "nav",
+      "value": "Home",
+      "path": "/home"
+    },
+    {
+      "type": "nav",
+      "value": "About Me",
+      "path": "/about"
+    },
+    {
+      "type": "nav",
+      "value": "Projects",
+      "path": "/projects"
+    },
+    {
+      "type": "dropdown",
+      "value": "Contact",
+      "profiles": [
+        {
+          "img": "img/github.jpg",
+          "url": "https://github.com/comraq",
+          "value": "Github"
+        },
+        {
+          "img": "img/linkedin.png",
+          "url": "https://ca.linkedin.com/in/adam-yin-99a227ba",
+          "value": "LinkedIn"
+        }
+      ],
+      "emails": [
+        {
+          "img": "img/outlook.gif",
+          "url": "mailto:yinadam@hotmail.com?subject=Hey Adam, let's chat!",
+          "value": "Outlook"
+        },
+        {
+          "img": "img/gmail.png",
+          "url": "mailto:yiranyinadam@gmail.com?subject=Hey Adam, let's chat!",
+          "value": "Gmail"
+        }
+      ]
+    }
+  ]
+}

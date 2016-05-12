@@ -1,3 +1,7 @@
 #app {
   background-color: #efe;
 }
+
+.navbar-brand img {
+  height: 50px;
+}

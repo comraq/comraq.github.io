@@ -1,5 +1,4 @@
-A skeleton node project with my preferred gulp-setup to build front end javascript and back end
-nodeJs (to be customized as needed for actual/specific project settings)       
+A skeleton node boilerplate with my preferred gulp-setup to build front end javascript and back end nodeJs (to be customized as needed for actual/specific project settings)       
 
 Custom project/app directories are defined in gulp/paths.js      
 

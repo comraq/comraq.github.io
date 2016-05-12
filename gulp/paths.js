@@ -1,4 +1,4 @@
-module.exports = function(wagner) {
+export default (wagner) => {
   // Client JS Paths
   wagner.constant("BIN_PATH", "./client/bin");
   wagner.constant("JS_SRC", "./client/app/app.js");
@@ -23,6 +23,9 @@ module.exports = function(wagner) {
                     "./node_modules/bootstrap/dist/**/*.css"
                   ]);
   wagner.constant("CSS_VEND_DEST", "vendors.min.css");
+
+  // Client HTML Paths
+  wagner.constant("HTML_SRC_GLOB", "./client/**/*.html");
 
   // Server JS Paths
   wagner.constant("SERV_BASE_PATH", "./server-transpiled");

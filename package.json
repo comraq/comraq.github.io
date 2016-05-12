@@ -1,7 +1,7 @@
 {
-  "name": "gulp-setup",
+  "name": "my-webpage",
   "version": "0.0.0",
-  "description": "Skeleton project with my preferred gulp, browserify setup",
+  "description": "my static webpage, using my gulp boilerplate",
   "main": "server-transpiled/index.js",
   "scripts": {
     "start": "node server-transpiled/index.js 7777",
@@ -36,6 +36,7 @@
     "morgan": "*",
     "react": "*",
     "react-dom": "*",
+    "react-router": "*",
     "wagner-core": "*"
   },
   "devDependencies": {
