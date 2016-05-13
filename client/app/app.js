@@ -1,10 +1,8 @@
-/*
- * Note: IIFE not required due to browserify auto scoping to
- *        preventing global pollution
- */
 import React from "react";
 import ReactDOM from "react-dom";
+import { Router, Route, IndexRoute } from "react-router";
 
+import ajax from "./utilities/ajax";
 import Layout from "./components/Layout";
 
 // Rest of the app's scripts goes here
@@ -16,32 +14,9 @@ const headers = {
   "Content-type": "application/json"
 };
 
-const ajax = (method, path, headers) =>
-  new Promise((resolve, reject) => {
-    method = method || "GET";
-    path = path || "/";
-
-    const xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = () => {
-      if (xmlhttp.readyState == 4) {
-        if (xmlhttp.status == 200)
-          resolve(xmlhttp.responseText);
-        else
-          reject(xmlhttp.status);
-      }
-    }
-
-    xmlhttp.open(method, path);
-    for(let key in headers)
-      xmlhttp.setRequestHeader(key, headers[key]);
-
-    xmlhttp.send();
-  })
-
 ajax("GET", dataFile, headers)
   .then(results => {
     results = JSON.parse(results);
-
     console.log(results)
 
     // Set page title
@@ -54,5 +29,3 @@ ajax("GET", dataFile, headers)
 
   })
   .catch(alert);
-
-
