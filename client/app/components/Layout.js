@@ -1,4 +1,5 @@
 import React from "react";
+import { Router, Route, IndexRoute, browserHistory } from "react-router";
 
 import Navbar from "./navbar/Navbar";
 import ButtonPanel from "./home/ButtonPanel";

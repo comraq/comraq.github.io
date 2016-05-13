@@ -1,7 +1,18 @@
-const ajax = (method, path, headers) =>
+/*
+ * Takes in a request object and returns a promise.
+ * Request Object comes in the following form:
+ * {
+ *   path: String,
+ *   method: String,
+ *   header: Object,
+ *   body: Object
+ * }
+ */
+const ajax = req =>
   new Promise((resolve, reject) => {
-    method = method || "GET";
-    path = path || "/";
+    let method = req.method || "GET";
+    let path = req.path || "/";
+    let body = req.body || {};
 
     const xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = () => {
@@ -14,10 +25,10 @@ const ajax = (method, path, headers) =>
     }
 
     xmlhttp.open(method, path);
-    for(let key in headers)
-      xmlhttp.setRequestHeader(key, headers[key]);
+    for(let key in req.header)
+      xmlhttp.setRequestHeader(key, req.header[key]);
 
-    xmlhttp.send();
+    xmlhttp.send(body);
   })
 
 export default ajax;
