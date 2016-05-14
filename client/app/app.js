@@ -19,7 +19,6 @@ ajax({
   header: headers
 }).then(results => {
   results = JSON.parse(results);
-  console.log(results)
 
   // Set page title
   document.getElementsByTagName("title")[0].innerHTML = results.title;

@@ -26,7 +26,6 @@ export default wagner => {
       entries: [ JS_SRC ],
       cache: {},
       packageCache: {},
-      poll: 100,
       delay: 0
     };
 

@@ -6,7 +6,7 @@ class Brand extends React.Component {
   }
 
   render() {
-    return <a href={ this.props.path } onClick={ this.props.callback }
+    return <a to={ this.props.path } onClick={ this.props.callback }
       className={ "navbar-brand " + ((this.props.active)? "active": "") }>
       { this.props.value }
     </a>;
