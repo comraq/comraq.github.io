@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Router, Route, IndexRoute } from "react-router";
 
-import ajax from "./utilities/ajax";
+import ajax from "./utils/ajax";
 import Layout from "./components/Layout";
 
 // Rest of the app's scripts goes here
@@ -16,13 +16,12 @@ const headers = {
 
 ajax("GET", dataFile, headers)
   .then(results => {
-    results = JSON.parse(results);
-    console.log(results)
+    let { data } = JSON.parse(results);
 
     // Set page title
-    document.getElementsByTagName("title")[0].innerHTML = results.title;
+    document.getElementsByTagName("title")[0].innerHTML = data.title;
 
-    let { navbar } = results;
+    let { navbar } = data;
     ReactDOM.render(
       <Layout data={ myStr } navbar={ navbar }/>,
       app);
