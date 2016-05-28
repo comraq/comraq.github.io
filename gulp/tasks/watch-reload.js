@@ -1,4 +1,5 @@
-var browserSync = require("browser-sync");
+var browserSync = require("browser-sync"),
+    historyApiFallback = require("connect-history-api-fallback");
 
 module.exports = function(gulp, plugins, BIN_PATH,
                           BASE_PATH, HTML_SRC_GLOB) {
@@ -11,7 +12,8 @@ module.exports = function(gulp, plugins, BIN_PATH,
       options.proxy = host + ":" + port;
     else {
       options.server = {
-        baseDir: BASE_PATH
+        baseDir: BASE_PATH,
+        middleware: [ historyApiFallback() ]
       };
     }
    

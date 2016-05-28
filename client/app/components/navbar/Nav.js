@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Link } from "react-router";
+
 class Nav extends React.Component {
   constructor(props) {
     super(props);
@@ -7,9 +9,9 @@ class Nav extends React.Component {
 
   render() {
     return <li className={ (this.props.active)? "active": "" }>
-      <a href={ this.props.path } onClick={ this.props.callback }>
+      <Link to={ this.props.path } onClick={ this.props.callback }>
         { this.props.value }
-      </a>
+      </Link>
     </li>;
   }
 }

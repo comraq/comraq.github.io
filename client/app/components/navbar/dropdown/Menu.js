@@ -14,7 +14,7 @@ class DropdownMenu extends React.Component {
     const emails = this.props.emails.map((e, i) =>
       <DropdownItem { ...e } key={ i }/>);
 
-    return <li className={ "dropdown " + (this.props.active)? "open": "" }>
+    return <li className={ "dropdown " + ((this.props.active)? "open": "") }>
       <a href="#" className="dropdown-toggle" data-toggle="dropdown"
         role="button" aria-haspopup="true"
         aria-expanded={ this.props.active } onClick={ this.props.callback }>

@@ -6,11 +6,11 @@ import Nav from "./Nav";
 import DropdownMenu from "./dropdown/Menu";
 
 class Navbar extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor(props, context) {
+    super(props, context);
 
     this.state = {
-      active: 0
+      active: 1
     };
 
     this.navClicked = this.navClicked.bind(this);
@@ -21,7 +21,7 @@ class Navbar extends React.Component {
   }
 
   render() {
-    let navs = this.props.navItems.map((e, i) => {
+    let navs = this.context.navItems.map((e, i) => {
       const props = {
         key: i,
         active: i == this.state.active,
@@ -38,7 +38,7 @@ class Navbar extends React.Component {
           return <Brand { ...props } />;
 
         case "nav":
-          return <Nav { ...props } />;
+          return <Nav { ...props } />
 
         case "dropdown":
           return <DropdownMenu { ...props } profiles={ e.profiles }
@@ -49,10 +49,17 @@ class Navbar extends React.Component {
       }
     });
 
-    return <nav className="navbar navbar-default">
-      <ul className="nav navbar-nav">{ navs }</ul>
-    </nav>;
+    return <div>
+      <nav className="navbar navbar-default">
+        <ul className="nav navbar-nav">{ navs }</ul>
+      </nav>
+      { this.props.children }
+    </div>;
   }
 }
+
+Navbar.contextTypes = {
+  navItems: React.PropTypes.array
+};
 
 export default Navbar;

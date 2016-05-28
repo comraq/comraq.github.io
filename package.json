@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "bootstrap": "*",
+    "connect-history-api-fallback": "*",
     "express": "*",
     "http-status": "*",
     "jquery": "*",
