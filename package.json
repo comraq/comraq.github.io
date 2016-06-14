@@ -49,6 +49,8 @@
     "browserify-shim": "*",
     "browserify": "*",
     "chai": "*",
+    "eslint": "*",
+    "eslint-plugin-react": "*",
     "gulp": "*",
     "gulp-babel": "*",
     "gulp-clean-css": "*",
